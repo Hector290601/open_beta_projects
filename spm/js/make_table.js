@@ -43,7 +43,7 @@ function build_table(){
 		row.style.width = "auto";
 		row.style.height = "auto";
 		row.id = rows;
-		row.className = "row";
+		row.className = "row row-cols-10";
 		field.appendChild(row);
 		selected.push(selected_row);
 	}
@@ -60,16 +60,17 @@ function clean_matrix(){
 			if(selected[i][j]){
 				var input = document.createElement("input");
 				input.id=i+","+j+"i";
-				input.type="password";
+				input.type="number";
 				last.firstChild.data = String("___");
 				col.replaceChild(input, last);
 			}
 		}
 	}
 	var button = document.createElement("button");
-	var text = document.createTextNode("submit");
+	var text = document.createTextNode("enviar");
 	button.id="submit";
 	button.appendChild(text);
+	button.type="submit"
 	button.addEventListener('click', function(){
 		var button = document.createElement("button");
 		var text = document.createTextNode("reiniciar");
@@ -135,11 +136,16 @@ function generate_numbers(){
 			}else{
 				last.firstChild.data = String("___");
 				col.push(NaN);
-				console.log("Aquí no");
 			}
 			row.push(col);
 		}
 		data.push(row);
 	}
-	setTimeout(clean_matrix,1000);
+	var time = document.getElementById("time");
+	setTimeout(clean_matrix,parseFloat(time.value) * 1000);
+}
+
+function time_changed(){
+	var time = document.getElementById("time");
+	document.getElementById("time_out").innerHTML = "Tiempo de visualización = " + time.value;
 }
