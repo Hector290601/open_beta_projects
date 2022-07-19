@@ -15,6 +15,170 @@
 		<label for="timeRange" class="form-label" id="time_out">
 			Tiempo de visualización = 5
 		</label>
+		<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help1">?</button>
+		<div class="modal fade" id="help1" tabindex="-1" aria-labelledby="help1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="help1">
+							Sección de ayuda 1.
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Salir"></button>
+					</div>
+					<div class="modal-body">
+						<p>
+						La página consiste de tres principales secciones, la sección de configuración/inicio, la sección de prueba y la sección de resultados.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help2">
+							Siguiente
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="help2" tabindex="-1" aria-labelledby="help2" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="help1">
+							Sección de ayuda 2.
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Salir"></button>
+					</div>
+					<div class="modal-body">
+						La sección de configuración, está ubicada en la parte superior de la pantalla, en esta sección, podrá encontrar el botón de inicio, la barra de configuración de tiempo de muestra y la sección de ayuda.
+					</div>
+					<div class="modal-footer">
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help1">
+							Anterior
+						</button>
+						<button class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help3">
+							Siguiente
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="help3" tabindex="-1" aria-labelledby="help3" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="help3">
+							Sección de ayuda 3.
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Salir"></button>
+					</div>
+					<div class="modal-body">
+						Para seleccionar el tiempo de espera, basta con deslizar el punto en la barra de selección o simplemente hacer click en algún lugar de la barra.
+						Al hacer este cambio, podrá observar cómo cambia la etiqueta del tiempo de visualización, ajústelo a como mejor le convenga.
+					</div>
+					<div class="modal-footer">
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help2">
+							Anterior
+						</button>
+						<button class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help4">
+							Siguiente
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="help4" tabindex="-1" aria-labelledby="help4" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="help4">
+							Sección de ayuda 4.
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Salir"></button>
+					</div>
+					<div class="modal-body">
+						La siguiente sección, es la sección de pruebas, verá una tabla de botones enumerados del 0 al 99, al dar click en cada botón, cambiará el color del botón.
+						Si el color del botón es azul, éste está seleccionado para que aparezca un número aleatorio al momento de iniciar la simulación, por el contrario, si está en color gris, no aparecerá ningún número en su interior.
+						Seleccione los botones como mejor lo concidere.
+					</div>
+					<div class="modal-footer">
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help3">
+							Anterior
+						</button>
+						<button class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help5">
+							Siguiente
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="help5" tabindex="-1" aria-labelledby="help5" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="help5">
+							Sección de ayuda 5.
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Salir"></button>
+					</div>
+					<div class="modal-body">
+						La última, es la sección de resultados, si aún no hace una simulación, no la verá.
+						En el momento en que seleccione empezar, aparecerá en la parte de abajo de la tabla de números.
+						En esta parte veremos una barra de progreso que nos indicará nuestro porcentaje de éxito.
+						Abajo de la barra, aparecerá el botón de enviar, para enviar sus resultados y sean calificados.
+						Y por último, aparecerá el botón de reiniciar, que le permitirá volver a entrenar.
+					</div>
+					<div class="modal-footer">
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help4">
+							Anterior
+						</button>
+						<button class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help6">
+							Siguiente
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="help6" tabindex="-1" aria-labelledby="help6" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="help1">
+							Sección de ayuda 6.
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Salir"></button>
+					</div>
+					<div class="modal-body">
+						Por último, para comenzar su entrenamiento, debe dar click en el botón azul que aparece en la parte de arriba de su pantalla, el que dice "¡Empezar!".
+						<br>
+						<h6>
+							No olvide divertirse.
+						</h6>
+					</div>
+					<div class="modal-footer">
+						<button onclick="" class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#help5">
+							Anterior
+						</button>
+						<button class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<input type="range" class="form-range" min="0.1" max="10" step="0.1" id="time" onchange="time_changed()" onmousemove="time_changed()">
 		<div class="container-fluid" id="field" style="width: 100%; height: 100%; margin-right: 0px; margin-left: 0px; padding-left: 0px; padding-right: 0px;">
 		</div>
