@@ -67,7 +67,7 @@ function clean_matrix(){
 		}
 	}
 	var button = document.createElement("button");
-	var text = document.createTextNode("submit");
+	var text = document.createTextNode("enviar");
 	button.id="submit";
 	button.appendChild(text);
 	button.type="submit"
