@@ -14,8 +14,8 @@ let max = 250;
 let sound;
 
 function preload() {
-	mariachi = loadImage('../img/icon.png');
-	fondo = loadImage('../img/bg.jpg');
+	mariachi = loadImage('./img/icon.png');
+	fondo = loadImage('./img/bg.jpg');
 }
 
 function setup() {
