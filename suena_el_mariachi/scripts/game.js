@@ -20,9 +20,9 @@ var img;
 var i = 0;
 
 function preload() {
-	mariachi = loadImage('../img/icon.png');
-	guitarrista = loadImage("../img/cantando.png");
-	fondo = loadImage('../img/bg.jpg');
+	mariachi = loadImage('./img/icon.png');
+	guitarrista = loadImage("./img/cantando.png");
+	fondo = loadImage('./img/bg.jpg');
 	song1 = loadSound('./sounds/sound_1.wav');
 	song2 = loadSound('./sounds/sound_2.wav');
 	song = song1;
