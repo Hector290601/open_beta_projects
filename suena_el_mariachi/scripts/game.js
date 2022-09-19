@@ -4,8 +4,6 @@ var start = 0;
 var end;
 var x = 0;
 var y = 0;
-var len = 100;
-var len2 = 100;
 var flag = true;
 let mariachi;
 let guitarrista;
@@ -16,8 +14,10 @@ let song1;
 let song2;
 var song;
 var img;
-
+var divider = 5;
 var i = 0;
+var len = 100;
+var len2 = 100;
 
 function preload() {
 	mariachi = loadImage('./img/icon.png');
@@ -42,10 +42,12 @@ function change_position(){
 }
 
 function draw() {
+	len = windowWidth/divider;
+	len2 = windowHeight/divider;
 	imageMode(CORNER);
-	background(fondo);
+	image(fondo,  - fondo.width/4, 0, fondo.width, windowHeight);
 	imageMode(CENTER);
-	image(img, x, y, len, len);
+	image(img, x, y, len, len2);
 	if(song1.isPlaying() || song2.isPlaying()){
 		i = 0;
 		flag = true;
@@ -77,6 +79,9 @@ function mouseClicked() {
 	var toly1 = y + len2 / 2;
 	var toly2 = y - len2 / 2;
 	if(mouseX < tolx1 && mouseX > tolx2 && mouseY < toly1 && mouseY > toly2){
+		len = windowWidth/divider;
+		len2 = windowHeight/divider;
+		divider += divider / 2;
 		x = -100;
 		y = -100;
 		if(song.isPlaying()){
@@ -101,4 +106,8 @@ function mouseClicked() {
 		}
 	}
 	return false;
+}
+
+function windowResized(){
+	resizeCanvas(windowWidth, windowHeight);
 }
