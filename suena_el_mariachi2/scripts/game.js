@@ -20,6 +20,7 @@ var img;
 var i = 0;
 
 function preload() {
+	song = loadSound("./sounds/sound_1.wav");
 	mariachi = loadImage('./img/icon.png');
 	guitarrista = loadImage("./img/cantando.png");
 	fondo = loadImage('./img/bg.jpg');
@@ -46,6 +47,9 @@ function draw() {
 	image(img, x, y, len, len);
 	if(flag){
 		change_position();
+	}
+	if(!song.isPlaying()){
+		song.play();
 	}
 	fill(0, 0, 0);
 	rect(0, 0, windowWidth, 20)
