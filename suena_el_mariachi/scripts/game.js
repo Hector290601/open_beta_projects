@@ -38,6 +38,10 @@ function setup() {
 function change_position(){
 	x = random(0, windowWidth - len);
 	y = random(0, windowHeight - len2 - 20);
+	ratio = img.width / img.height;
+	ratio2 = img.height / img.width;
+	len = (windowWidth/divider) * ratio;
+	len2 = (windowHeight/divider) * ratio2;
 	i = 0;
 }
 
@@ -45,8 +49,8 @@ function draw() {
 	len = windowWidth/divider;
 	len2 = windowHeight/divider;
 	imageMode(CORNER);
-	image(fondo,  - fondo.width/4, 0, fondo.width, windowHeight);
 	imageMode(CENTER);
+	image(fondo, windowWidth / 2, windowHeight / 2);
 	image(img, x, y, len, len2);
 	if(song1.isPlaying() || song2.isPlaying()){
 		i = 0;
@@ -79,8 +83,9 @@ function mouseClicked() {
 	var toly1 = y + len2 / 2;
 	var toly2 = y - len2 / 2;
 	if(mouseX < tolx1 && mouseX > tolx2 && mouseY < toly1 && mouseY > toly2){
-		len = windowWidth/divider;
+		ratio = img.width / img.height
 		len2 = windowHeight/divider;
+		len = len * ratio;
 		divider += divider / 2;
 		x = -100;
 		y = -100;
