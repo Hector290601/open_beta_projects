@@ -86,7 +86,7 @@ function mouseClicked() {
 		ratio = img.width / img.height
 		len2 = windowHeight/divider;
 		len = len * ratio;
-		divider += divider / 2;
+		divider += 1;
 		x = -100;
 		y = -100;
 		if(song.isPlaying()){
