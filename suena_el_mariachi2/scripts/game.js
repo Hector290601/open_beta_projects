@@ -41,9 +41,8 @@ function change_position(){
 }
 
 function draw() {
-	imageMode(CORNER);
-	background(fondo);
 	imageMode(CENTER);
+	image(fondo, windowWidth / 2, windowHeight / 2);
 	image(img, x, y, len, len);
 	if(flag){
 		change_position();
